@@ -1,2 +1,2 @@
 # the-odin-project  
-Includes all the projects included in the odin project learning path (javascript).
+Includes project 1 of the odin project learning path
