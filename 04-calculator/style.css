@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    overflow: hidden; /* Prevent overflow */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.calculator {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+.number {
+    background-color: #e0e0e0;
+}
+
+.number:hover {
+    background-color: #d4d4d4;
+}
+
+.operator {
+    background-color: #f09a36;
+}
+
+.operator:hover {
+    background-color: #f0b361;
+}
+
+.decimal {
+    background-color: #e0e0e0;
+}
+
+.decimal:hover {
+    background-color: #d4d4d4;
+}
+
+.equal {
+    background-color: #f09a36;
+    height: 120px; /* Taller height for equal button */
+    width: 60px; /* Same width as other buttons */
+}
+
+.equal:hover {
+    background-color: #f0b361;
+}
+
+#clear-btn {
+    background-color: #d4d4d2;
+    color: #000;
+}
+
+#clear-btn:hover {
+    background-color: #e6e6e3;
+}
+
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.screen {
+    width: 100%;
+    max-width: 320px; /* Limit screen width */
+    border: 1px solid salmon;
+    height: 75px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content fits within screen */
+}
+
+.previous {
+    font-size: 20px;
+    color: #888;
+    overflow: hidden; /* Ensure no overflow */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.current {
+    font-size: 30px;
+    color: #000;
+    overflow: hidden; /* Ensure no overflow */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.other-rows {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    box-sizing: border-box; /* Ensure padding is included in total width/height */
+}
+
