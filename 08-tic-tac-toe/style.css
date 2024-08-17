@@ -1,21 +1,46 @@
-.cell {
-    width: 75px;
-    height: 75px;
-    border: 2px solid;
-    box-shadow: 0 0 0 2px;
-    line-height: 75px;
-    font-size: 50px;
-    cursor: pointer;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
- 
-#gameContainer{
-    font-family: "Permanent Marker" , cursive;
+
+#gameContainer {
     text-align: center;
 }
 
 #cellContainer {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: 225px;
-    margin: auto;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+#statusText {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }
