@@ -1,7 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
-const winConditon = [
+const winConditions = [ // Fixed typo
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -18,17 +18,17 @@ let running = false;
 
 initializeGame(); 
 
-function initializeGame(){
-    cells.forEach(cell => cell.addEventListener("click", cellCicked));
-    restartBtn.addEventListener ("click", restartGame);
+function initializeGame() {
+    cells.forEach(cell => cell.addEventListener("click", cellClicked)); // Fixed function name
+    restartBtn.addEventListener("click", restartGame);
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true;
 }
 
-function cellCicked() {
+function cellClicked() { // Fixed function name
     const cellIndex = this.getAttribute("cellIndex");
 
-    if(options[cellIndex] != "" || !running){
+    if (options[cellIndex] != "" || !running) {
         return;
     }
 
@@ -37,7 +37,7 @@ function cellCicked() {
 }
 
 function updateCell(cell, index) {
-    option[index] = currentPlayer;
+    options[index] = currentPlayer; // Fixed typo: option -> options
     cell.textContent = currentPlayer;
 }
 
@@ -46,33 +46,31 @@ function changePlayer() {
     statusText.textContent = `${currentPlayer}'s turn`;
 }
 
-function checkWinner () {
+function checkWinner() {
     let roundWon = false;
 
-    for(let i=0; i< winConditons.length; i++){
+    for (let i = 0; i < winConditions.length; i++) { // Fixed typo: winConditons -> winConditions
         const condition = winConditions[i];
         const cellA = options[condition[0]];
         const cellB = options[condition[1]];
         const cellC = options[condition[2]];
 
-        if(cellA == "" | cellB == "" | cellC == ""){
+        if (cellA == "" || cellB == "" || cellC == "") {
             continue;
         }
-        if(cellA == cellB && cellB == cellC){
+        if (cellA == cellB && cellB == cellC) {
             roundWon = true;
             break;
         }
     }
 
-    if(roundWon){
-        statusText.textContent =  `${currentPlayer} wins!`;
+    if (roundWon) {
+        statusText.textContent = `${currentPlayer} wins!`;
         running = false;
-    }
-    else if (!options.includes("")){
+    } else if (!options.includes("")) {
         statusText.textContent = `Draw!`;
         running = false;
-    }
-    else{
+    } else {
         changePlayer();
     }
 }
