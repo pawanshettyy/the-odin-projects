@@ -1,54 +1,137 @@
-*{
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex;
 }
 
 .sidebar {
-    background-color: #0ea5e9;
-    height: 100vh;
+    width: 240px;
+    background-color: #2196F3;
     color: white;
-}
-
-.logo-text{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 20px 40px;
-}
-
-.logo-text {
-    font-size: 25px;
-}
-
-.icon-text{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 10px 40px;
-}
-
-.icon-text p{
-    margin-left: 10px;
-    font-size: 14px;
-     
-}
-
-.list-items-bottom {
-    margin-top: 50px;
-}
-
-/* Main Screen */
-.main {
-    background-color: white;
+    padding: 20px;
     height: 100vh;
 }
 
+.sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .user-info div p {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-section {
+    width: 70%;
+}
+
+.projects-section h2 {
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #FFEB3B;
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+}
+
+.announcements-section {
+    width: 25%;
+    margin-left: 5%;
+}
+
+.announcements-section h2 {
+    margin-bottom: 10px;
+}
+
+.announcement, .trending {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.announcement h3 {
+    margin: 0 0 10px;
+}
 
 
